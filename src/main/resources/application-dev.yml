@@ -1,0 +1,31 @@
+spring:
+  applicaion:
+    name: seckill
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/db_second_kill?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.jdbc.Driver
+
+server:
+  port: 8080
+
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -1,0 +1,35 @@
+spring:
+  applicaion:
+    name: mmall
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .jsp
+
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/mmall?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8081
+
+  rabbitmq:
+    addresses: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+
+
+
+#mybatis
+mybatis:
+  mapper-locations: classpath:mappers/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
